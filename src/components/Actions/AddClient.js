@@ -24,10 +24,10 @@ class AddClient extends Component {
         return (
             <div className='page-section'>
                 <h4>ADD CLIENT</h4>
-                <p>First name: <input type='text' value={this.state.firstName} name='firstName' onChange={this.bindInput}></input></p>
-                <p>Surname: <input type='text' value={this.state.surname} name='surname' onChange={this.bindInput}></input></p>
-                <p>Country: <input type='text' value={this.state.country} name='country' onChange={this.bindInput}></input></p>
-                <p>Owner: <input type='text' value={this.state.owner} name='owner' onChange={this.bindInput}></input></p>
+                <p>First name: <input type='text' className='underline-input new-client-input' value={this.state.firstName} name='firstName' onChange={this.bindInput}></input></p>
+                <p>Surname: <input type='text' className='underline-input new-client-input' value={this.state.surname} name='surname' onChange={this.bindInput}></input></p>
+                <p>Country: <input type='text' className='underline-input new-client-input' value={this.state.country} name='country' onChange={this.bindInput}></input></p>
+                <p>Owner: <input type='text' className='underline-input new-client-input' value={this.state.owner} name='owner' onChange={this.bindInput}></input></p>
                 <button type='button' id='add-new-client' onClick={this.addClient}>Add New Client</button>
             </div>
         );

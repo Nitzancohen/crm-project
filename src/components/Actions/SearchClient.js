@@ -21,7 +21,7 @@ class SearchClient extends Component {
         return (
             <div>
                 <span>Client: </span>
-                <input list="names" onChange={this.changeClient}></input>
+                <input list="names" className='underline-input' onChange={this.changeClient}></input>
                 <datalist id="names">
                     {this.props.names()}
                 </datalist>

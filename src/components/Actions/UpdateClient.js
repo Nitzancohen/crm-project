@@ -24,8 +24,10 @@ class UpdateClient extends Component {
     bindInput = (e) => this.setState({ [e.target.name]: e.target.value })
 
     checkClientName = () => {
-        if (!this.state.clientName.length) return false;
-        if (!this.props.clientNames.includes(this.state.clientName)) return false;
+        if (!this.state.clientName.length || !this.props.clientNames.includes(this.state.clientName)) {
+            alert('please enter a valid Client name...')    
+            return false;
+        }
         return true;
     }
 
@@ -59,17 +61,17 @@ class UpdateClient extends Component {
             <div className='page-section'>
                 <h4>UPDATE</h4>
                 <SearchClient names={this.generateClientsNamesTags} changeClient={this.changeClient}/>
-                <p>
+                <p className='indent-update'>
                     <span>Transfer ownership to: </span>
-                    <select name='owner' onChange={this.bindInput}>
+                    <select name='owner' className='select-field underline-input' onChange={this.bindInput}>
                         <option>owner</option>
                         {this.generateOwnersTags()}
                     </select>
                     <span className='client-action' onClick={this.transferOwner}>TRANSFER</span>
                 </p>
-                <p>
+                <p className='indent-update'>
                     <span>Send email: </span>
-                    <select name='emailType' onChange={this.bindInput}>
+                    <select name='emailType' className='select-field underline-input' onChange={this.bindInput}>
                         <option>Email Type</option>
                         <option>A</option>
                         <option>B</option>
@@ -78,7 +80,7 @@ class UpdateClient extends Component {
                     </select>
                     <span className='client-action' onClick={this.sendEmail}>SEND</span>
                 </p>
-                <p>Declare sale!<span className='client-action' onClick={this.declareSale}>DECLARE</span></p>
+                <p className='indent-update'>Declare sale!<span className='client-action' onClick={this.declareSale}>DECLARE</span></p>
                 <hr />
             </div>
         );

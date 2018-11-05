@@ -23,8 +23,8 @@ class FilterClient extends Component {
     render() {
         return (
             <div id='filter-clients'>
-                <input type='text' value={this.state.searchTerm} onChange={this.changeSearchTerm} placeholder='Search' />
-                <select value={this.state.searchField} onChange={this.changeSearchField}>
+                <input type='text' className='underline-input' id='filter-field' value={this.state.searchTerm} onChange={this.changeSearchTerm} placeholder='Search' />
+                <select className='underline-input' value={this.state.searchField} onChange={this.changeSearchField}>
                     <option value='name'>Name</option>
                     <option value='owner'>Owner</option>
                     <option value='country'>Country</option>

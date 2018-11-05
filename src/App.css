@@ -5,13 +5,26 @@
 
 .homepage{
   text-align: center;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .homepage h4{
   font-size: 60px;
-  font-weight: 600;
+  font-weight: 800;
   color: #F7CE3E;
   margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+#info {
+  font-size: 20px;
+  text-shadow: 1px 1px 5px #F7CE3E;
+}
+
+#lorem {
+  font-style: italic;
+  font-size: 14px;
 }
 
 .page {

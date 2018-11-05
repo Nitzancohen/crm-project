@@ -2,15 +2,26 @@
     margin-left: 20px;
 }
 
+.indent-update {
+    margin-left: 20px;
+}
+
 input, select {
     width: 170px;
 }
 
 .client-action {
-    margin: 10px;
+    /* margin: 10px; */
+    position: fixed;
+    left: 430px;
     color: #F7CE3E;
     font-weight: 600;
     cursor: pointer;
+}
+
+.select-field {
+    position: fixed;
+    left: 230px;
 }
 
 #add-new-client {
@@ -20,4 +31,15 @@ input, select {
     margin: 0 10px;
     padding: 10px;
     border: none;
+}
+
+.new-client-input {
+    position: fixed;
+    left: 130px;
+}
+
+.underline-input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid gray;
 }
