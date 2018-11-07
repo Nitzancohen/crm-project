@@ -11,7 +11,7 @@ class TopEmployees extends Component {
     }
 
     componentDidMount = async () => {
-        let data = await Axios.get('http://localhost:8000/charts/employees')
+        let data = await Axios.get('/charts/employees')
         let topEmployees = [...data.data]
         for (let e of topEmployees) {
             e.owner = e.owner.split(' ')[0]

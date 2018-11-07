@@ -15,7 +15,7 @@ class ActionsPage extends Component {
     }
 
     componentDidMount = () => {
-        Axios.get('http://localhost:8000/clients').then(clients => {
+        Axios.get('/clients').then(clients => {
             this.setState({ clients: clients.data })
             this.generateData(clients.data)
         })
@@ -43,7 +43,7 @@ class ActionsPage extends Component {
         clientToUpdate[prop] = value;
 
         Axios({
-            url: 'http://localhost:8000/clients/' + clientId,
+            url: '/clients/' + clientId,
             method: 'put',
             data: {
                 client: clientToUpdate
@@ -93,7 +93,7 @@ class ActionsPage extends Component {
             country: newClientInfo.country
         }
         Axios({
-            url: 'http://localhost:8000/clients',            
+            url: '/clients',            
             method: 'post',
             data: {
                 client: newClient

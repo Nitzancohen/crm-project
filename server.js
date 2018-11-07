@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const clientApi = require('./clientsApi.js')
-app.listen(8000);
+app.listen(process.env.PORT || 8000);
 
 app.use(express.static('public'));
 app.use(express.static('node_modules'));

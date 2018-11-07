@@ -14,7 +14,7 @@ class SalesBy extends Component {
     componentDidMount = () => this.getData()
 
     getData = async () => {
-        let data = await Axios.get('http://localhost:8000/charts/salesby/'+this.state.category)
+        let data = await Axios.get('/charts/salesby/'+this.state.category)
         let salesBy = [...data.data]
         for (let s of salesBy) {
             s.dataType = s.dataType.split(' ')[0]

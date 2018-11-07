@@ -13,10 +13,10 @@ class Badge extends Component {
     }
 
     componentDidMount = async () => {
-        let newClientsCount = await Axios.get('http://localhost:8000/badges/newclients')
-        let emailsSent = await Axios.get('http://localhost:8000/badges/emails')
-        let outstanding = await Axios.get('http://localhost:8000/badges/outstanding')
-        let hottestCountry = await Axios.get('http://localhost:8000/badges/hottestCountry')
+        let newClientsCount = await Axios.get('/badges/newclients')
+        let emailsSent = await Axios.get('/badges/emails')
+        let outstanding = await Axios.get('/badges/outstanding')
+        let hottestCountry = await Axios.get('/badges/hottestCountry')
         this.setState({
                 newClientsCount: newClientsCount.data,
                 emailsSent: emailsSent.data,
